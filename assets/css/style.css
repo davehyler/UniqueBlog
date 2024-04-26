@@ -1,0 +1,206 @@
+/* To Do: padding currently set to match post box, change once finished. Create variables for color codes. Add border radius of 8 to make each box look the same */
+:root {
+  --dark: #18226d;
+  --white: #ffffff;
+}
+body { 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+    /* declare 100 percent of users screen */
+    min-height: 100vh; 
+    display: flex; 
+    margin: 0; 
+    padding: 0; 
+    flex-direction: column; 
+} 
+  /* adding name to left side of header */
+.name { 
+    margin: 0;
+    margin-left: 5%;  
+    padding: 0; 
+} 
+/* make links show as white instead of default blue */
+a { 
+    color: white;
+} 
+/* use for the header to display each text in-line with each other rather than stacked */
+li { 
+    display: inline; 
+    padding: 15px; 
+    margin-right: 10px;
+} 
+/* choose between flex (side by side from justified right) or block (on top of each other) */
+/* update: block works better as the page will increase with each post rather than growing horizontally */
+main { 
+    flex-grow: 1; 
+    display: block; 
+    align-items: center; 
+    padding-top: 82px; 
+    margin-top: 42px;
+} 
+header { 
+    background-color: var(--dark);
+    color: var(--white); 
+    /* display items one after the other horizontally */    
+    display: flex; 
+    align-items: center; 
+    /* add space between header items so they aren't compressed together */
+    justify-content: space-between; 
+    
+    /* add width tag to CSS so that the header spans the full length */
+    width: 100%; 
+    padding: 10px; 
+    /* add padding to lower region so that slider does not leave header */
+    padding-bottom: 26px;
+} 
+footer { 
+    background-color: var(--dark);
+    color: rgb(255, 255, 255); 
+    text-align: center; 
+    padding: 0.7rem; 
+} 
+/* Creates a border/box around the new post you have just submitted */
+.blogPost { 
+    border: 2px solid var(--dark); 
+    border-radius: 8px; /* unify with other radii */
+    text-align: center; 
+    padding: 42px; 
+}
+  /*//style for boxing and padding around the main submission area  */
+.your-post { 
+    width: 50%; 
+    height: 75%; 
+    margin: auto; 
+    border-radius: 8px; 
+    padding: 18px; 
+    padding-top: 8px; /* add extra  */
+    text-align: center; 
+} 
+/* Input styling for form */
+.usernameDiv input { 
+  width: 100%; 
+  max-width: 100%; 
+  padding: 18px; 
+  margin-bottom: 12px; 
+  border: 2px solid var(--dark); 
+  border-radius: 8px; 
+  box-sizing: border-box; 
+} 
+.titleDiv input { 
+  width: 100%; 
+  max-width: 100%; 
+  padding: 18px; 
+  margin-bottom: 12px; 
+  border: 2px solid var(--dark); 
+  border-radius: 8px; 
+  box-sizing: border-box; 
+} 
+.blogContent { 
+    width: 100%; 
+    max-width: 100%; 
+    padding: 18px; 
+    margin-bottom: 12px; 
+    border: 2px solid var(--dark); 
+    border-radius: 8px; 
+    box-sizing: border-box;
+    height: 200px; 
+} 
+/* make text on form heavier */
+.blogposting { 
+    font-weight: bold; 
+}
+/* add styling for the three buttons */
+.postButton { 
+    background-color: #159af4; 
+    color: var(--white); 
+    padding: 10px 20px; 
+    border-radius: 8px; 
+    font-size: 18px; 
+} 
+.delete-post { 
+    background-color: #ee402d; 
+    color: var(--white); 
+    padding: 8px 15px; 
+    border-radius: 8px; 
+    font-size: 18px;
+} 
+.back-button { 
+    background-color: #1500ff; 
+    color: var(--white); 
+    padding: 8px 15px; 
+    border-radius: 8px; 
+    font-size: 18px; 
+} 
+/* duplicate and apply to other buttons/selections if finished before project due date */
+/* //adds UI element to change the background of delete button when hovered upon  */
+.delete-post:hover { 
+    background-color: #4c0c05; 
+} 
+.back-button:hover { 
+  background-color: var(--dark); 
+} 
+.postButton:hover {
+  background-color: var(--dark);
+}
+/* Dark Mode Example added below. edit to accomodate page */
+.dark {
+    height: 10vh;
+  }
+  /* Light Mode */
+  .light {
+    color: black;
+    height: 10vh;
+  }
+  /* Styling the Switch button */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  /* Hide checkbox */
+  .switch input {
+    opacity: 0;
+  }
+  /* slider surround */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #006d88;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    /* position and size of slider */
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  /* slides the button to either side */
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  /* add radius for sliders gap */
+  .slider.round {
+    border-radius: 42px;
+  }
+  /* add radius for actual slider */
+  .slider.round:before {
+    border-radius: 42%;
+  }
+  .row {
+    display: flex;
+  }
+  .col {
+    margin: 20px;
+  }
