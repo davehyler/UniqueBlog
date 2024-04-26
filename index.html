@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<head> 
+    <!-- CSS file linked -->
+    <link rel="stylesheet" href="assets/css/style.css"> 
+    <title>Blog Project for Week 5</title> 
+</head> 
+
+<body> 
+    <header> 
+        <h1 class="name">D.Hyler Blog</h1>
+        <div class="container dark">
+            <p>Here you can slide between Light Mode and Dark Mode:</p>
+            <div class="row toggle">
+              <div class="col">
+                <p>Light Mode</p>
+              </div>
+              <label class="switch col">
+                <input type="checkbox" id="darkmode">
+                <span class="slider round"></span>
+              </label>
+              <div class="col">
+                <p>Dark Mode</p>
+              </div>
+            </div>
+        </div>
+        <nav> 
+            <ul> 
+                <li class="nav"><a href="http://github.com/davehyler">GitHub</a></li> 
+                <li class="nav"> 
+                      <a href="#">Create Post</a> 
+                  </li>
+                <li class="nav"><a href="http://github.com/davehyler">Contact Information</a></li> 
+            </ul> 
+        </nav> 
+    </header> 
+
+    <main class="newPost"> 
+        <div id="postBox"> 
+            <div class="your-post"> 
+                <h2>Create your new blog post here!</h2>
+                <h3>(All information required...)</h3> 
+                <form id="postInfo"> 
+                    <div class="upper"> 
+                        <div class="usernameDiv"> 
+                            <label class="blogposting" for="blogUsername"> 
+                                  Type your USERNAME: 
+                              </label> 
+                            <input type="text" class="blogUsername"
+                             id="blogUsername" name="blogUsername"
+                              autocomplete="off" required> 
+                        </div> 
+                        <div class="titleDiv"> 
+                            <label class="blogposting" for="blogTitle"> 
+                                  Give your Blog a TITLE: 
+                              </label> 
+                            <input type="text" class="blogTitle"
+                             id="blogTitle" name="blogTitle" 
+                             autocomplete="off" required> 
+                        </div> 
+                    </div> 
+  
+                    <label class="blogposting" for="blogContent"> 
+                          Type your Blog CONTENT below: 
+                      </label> 
+                    <textarea class="blogContent" id="blogContent" 
+                               name="blogContent" autocomplete="off" 
+                               required> 
+                      </textarea> 
+  
+                    <button type="submit" id="postButton" 
+                    class="postButton">Post</button> 
+                </form> 
+            </div> 
+        </div> 
+    </main> 
+    <footer> 
+        <h2><a href="http://github.com/davehyler">D.Hyler Portfolio</a></h2>
+    </footer> 
+    <!-- link to the JavaScript file. Change to "assets/javascript/script.js" and move file structure prior to assignment submission -->
+    <script src="assets/javascript/script.js"></script> 
+</body> 
+  
+</html>
